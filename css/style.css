@@ -3,6 +3,17 @@ div.skip_div {
     grid-template-columns: 1fr;
 }
 
+.empty{
+    position: absolute;
+    right: -100%;
+    bottom: 5px;
+    transition: left 1s ease-in; 
+}
+
+.empty:focus{
+    right: 5px
+}
+
 a.skip{
     background: black;
     justify-self: center;
@@ -53,6 +64,8 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+
 
 
 
