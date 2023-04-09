@@ -10,11 +10,19 @@
     <link href="dist/css/lightbox.css" rel="stylesheet" />
     <title>Galley Grub</title>
 </head>
-<body>
+<body class="main2">
     <header>
         <nav>
             <div class="skip_div"><a href="#skip" class="skip">Skip to Main Content</a></div>
-            <ul>
+            <div class="dropdown" tabindex="0">
+                <button class="dropbtn">Pages</button>
+                <div class="dropdown-content">
+                  <a href="index.html">Homepage</a>
+                  <a href="" class="small_current"><i class="fa-solid fa-check"></i> Galley Grub</a>
+                  <a href="page2.html" class="last_page">Krusty Krew</a>
+                </div>
+            </div>
+            <ul class="big_nav">
                 <li><a href="index.html">Homepage</a></li>
                 <li><a href="" class="current">Galley Grub</a></li>
                 <li><a href="page2.html">Krusty Krew</a></li>
@@ -22,10 +30,10 @@
         </nav>
     </header>
     <main id="skip">
-        <h1>Galley Grub</h1>
+        <h1 class="page2_head">Galley Grub</h1>
         <div class="menu">
-            <p class="item patty"><span class="left"><a href = "menu_images/krabby_patty.jpeg" target="_blank" data-lightbox="patty" data-title="" data-alt="">
-                Krabby Patty</a></span>...............<span class="right"> 1.25</span><br> 
+            <p class="item patty"><span class="dotted"><a href = "menu_images/krabby_patty.jpeg" target="_blank" data-lightbox="patty" data-title="" data-alt="">
+                Krabby Patty</a></span><span class="right"> 1.25</span><br> 
                 <span class="extra">w/sea cheese............. 1.50</span><br>
                 <span class="extra">w/jellyfish jelly........ 1.75</span></p>
             <p class="item double_patty">Double Krabby Patty................ 2.00<br> 
@@ -70,7 +78,8 @@
         </div>
     </main>
     <script src="dist/js/lightbox-plus-jquery.js"></script>
-    <script src="js/java.js"></script>
+    <script src="https://kit.fontawesome.com/797c67656a.js" crossorigin="anonymous"></script>
+    <script src="js/java2.js"></script>
 
     <footer>
         <p>hi</p>
