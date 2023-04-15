@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Homepage</title>
+
 </head>
 <body class="home">
     <header>
@@ -28,15 +29,25 @@
             </ul>
         </nav>
     </header>
+
     <main id="skip">
+
         <div class="logo_text">
-            <h1 class="greeting"><div><span class="the">The</span> <br> Krusty<br> Krab</div></h1>
+            <h1 class="greeting"><span class="the">The</span> <br> Krusty<br> Krab</h1>
             <p class="tagline"><span>Remembering Pickles Since 1999</span></p>
         </div>
 
+
+        <div id="alert" title="Plankton Warning">
+            <p class="alertText">Warning!</p>
+            <img src="main_images/Plankton.webp" alt="Plankton laughing menacingly" />
+            <p>Be on the look out for Sheldon J. Plankton.  He has been trying to steal the secret formula for years, with each scheme crazier than the last. <br><br>(click any button to continue)</p>
+        </div>
+
+
         <div class="main_container">
             <div class="main_content">
-                <img src="main_images/krusty_krab.jpeg", alt="Outside view of Krusty Krab" class="building">
+                <img src="main_images/krusty_krab.jpeg" alt="Outside view of Krusty Krab" class="building">
                 <ul>
                     <li class="info_text">Located at 831 Bottom Feeder Lane. Come give us your money!</li>
                     <li></li>
@@ -46,9 +57,10 @@
                     <li><i class="fa-solid fa-anchor"></i>  Closed on Sunday<span class="aside">*</span></li>
                 </ul>
             </div>
+            <div><button class="showAlert">Important Notice</button></div>
             <div class="main_content">
                 <p>Home to the Krabby Patty, famous across the seven seas and certified to be good for your soul!<span class="aside">**</span></p>
-                <img src="main_images/soul_food.jpg", alt="Angel Spongebob holding a Krabby Patty" class="soul">
+                <img src="main_images/soul_food.jpg" alt="Angel Spongebob holding a Krabby Patty" class="soul">
             </div>
         </div>
 
@@ -58,11 +70,12 @@
     </main>
 
     <footer>
-        <p>All images taken from Spongebob Squarepants&#8482. <br><br> This website is purely for educational purposes, and I in no way claim rights on these images.</p>
+        <p>All images taken from Spongebob Squarepants&#8482;. <br><br> This website is purely for educational purposes, and I in no way claim rights on these images.</p>
     </footer>
 
     <script src="https://kit.fontawesome.com/797c67656a.js" crossorigin="anonymous"></script>
     <script src="js/java2.js"></script>
+    <script src="js/alert.js"></script>
 
 </body>
 </html>

@@ -24,7 +24,7 @@ footer{
     padding: 2% 1%;
     margin-top: 5%;
     text-align: center;
-    background-color: lightgrey;
+    background: dimgray;
     color: white;
     background-image: url(../main_images/Employee_of_the_Month_Background.webp);
     background-position: left;
@@ -46,7 +46,6 @@ a.skip{
     position: absolute;
     top: -40px;
     border-radius: 5px;
-    /* -webkit-transition: top 1s ease-out; */
     transition: top 1s ease-in-out; 
     z-index: 1;
   }
@@ -83,14 +82,14 @@ a {
 a.current {
     color: yellow;
     font-weight: bolder;
-    font-size: 110%;
+    font-size: 120%;
 }
 
 nav{
     text-align: center;
     font-size: 150%;
     padding: 2%;
-    background: lightgrey;
+    background: dimgray;
     background-image: url(../main_images/Employee_of_the_Month_Background.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,12 +163,45 @@ li {
 
 /* Home */
 
+#alert {
+    display: none;
+    width: 70%;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    margin-left: -37.5%;
+    margin-top: 5%;
+    padding: 2%;
+    background-color: white;
+    text-align: center;
+    border: 5px solid black;
+}
+
+#alert img{
+    height: auto;
+    width: 30%;
+    margin: auto;
+    padding: 2% 0;
+}
+
+.alertText {
+    font-size: 200%;
+}
+
+.showAlert {
+    background-color: #BD1520;
+    color: white;
+    padding: 2%;
+    border-radius: 15px;
+    
+}
+
+
 .home {
     background-color: lightcyan;
     background-image: url(../main_images/Atlantis_SquarePantis_Background.webp);
     background-position: center;
-    background-repeat: repeat-x;
-    background-size: auto 100%;
+    background-size: cover;
 
 }
 
@@ -298,8 +330,8 @@ li {
 }
 
 .item {
-    width: 80%;
-    font-size: 90%;
+    width: 90%;
+    font-size: 85%;
     margin: 1.5% 0;
     color: #6F1F16;
     overflow: hidden;
@@ -365,7 +397,7 @@ li {
 /* Page 2 */
 
 .body3{
-    background-color: rgb(0, 255, 234);
+    background-color: #00574E;
     background-image: url("../main_images/sea_background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -376,7 +408,7 @@ li {
     display: grid;
     justify-content: center;
     grid-template-columns: 90%;
-    grid-template-rows: 4fr 1fr 4fr 1fr 4fr 1fr 4fr  1fr;
+    grid-template-rows: 3fr 1fr 3fr 1fr 3fr 1fr 3fr  1fr;
     gap: 2%;
     justify-items: center;
 }
@@ -393,25 +425,26 @@ li {
     text-align: center;
     line-height: 2;
     font-size: 80%;
-    /* border: 3px dotted black; */
-   background-color: rgb(180, 180, 221);
+    background-color: rgb(180, 180, 221);
 
 }
 
 #page3 span{
     /* background-color: rgb(180, 180, 221); */
-    color: #BD1520;
+    color: #4E86C7;
     padding: 2%;
-    border: 10px dotted #BD1520;
+    border: 10px inset #4E86C7;
+    background-color: white;
 }
 
 #page3 {
     margin: 2%;
+    font-size: 140%;
 }
 
 #hat{
     display: inline;
-    height: 50px;
+    height: 25px;
     width: auto;
     margin-bottom: -1%;
     padding-right: 1%;
@@ -419,29 +452,27 @@ li {
 }
 
 .flipped{
-    -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
 .desc1{
-    border: 10px dotted red;
+    border: 10px inset red;
 }
 
 .desc2{
-    border: 10px dotted yellow;
+    border: 10px inset yellow;
 }
 
 .desc3{
-    border: 10px dotted lightblue;
+    border: 10px inset lightblue;
 }
 
 .desc4{
-    border: 10px dotted pink;
+    border: 10px inset pink;
 }
 
 .slide {
     display: None;
-    border: 5px solid darkgreen;
 }
 
 
@@ -490,16 +521,23 @@ li {
 
 }
 
+.slide p {
+    display: flex;
+    justify-content: center;
+}
+
 .slide p span{
     background-color: whitesmoke;
     padding: 2px 5px;
     border: 2px solid black;
+    font-size: 70%;
 }
 
 .slide img {
     max-width: 100%;
-    max-height: auto;
+    height: auto;
     overflow: hidden;
+    border: 5px ridge darkgreen;
 }
 
 .dots {
@@ -519,6 +557,12 @@ li {
   
   .active, .dot:hover {
     background-color: #717171;
+  }
+
+  @media (prefers-reduced-motion) {
+    .dot {
+        transition: none;
+    }
   }
 
 
@@ -571,6 +615,19 @@ li {
         height: auto;
     }
 
+    #page3 {
+        margin: 2%;
+        font-size: 200%;
+    }
+
+    #hat{
+        height: 50px;
+    }
+
+    .slide p span{
+        font-size: 90%;
+    }
+
 
 
 
@@ -587,7 +644,7 @@ li {
     /* home */
 
     .greeting {
-        padding: 4% 8% 8%;
+        padding: 6% 8% 8%;
     }
 
     .warning {
@@ -637,6 +694,10 @@ li {
 
     .desc3, .desc4 {
         order: 3;
+    }
+
+    .slide p span{
+        font-size: 100%;
     }
 
 
