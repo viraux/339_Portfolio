@@ -52,24 +52,24 @@
                 <span class="extra dots">w/sea cheese</span><span> 3.25</span></p>
             <p class="item pipsqueak"><span class="dots"><a href = "menu_images/pipsqueak.webp" target="_blank" data-lightbox="pipsqueak" data-title="Barnacle Boy's favorite!" data-alt="Squidward holding a pipsqueak patty">Pipsqueak Patty</a></span><span> 0.75</span><br>
                 <span class="extra dots">w/sea cheese</span><span> 1.00</span></p>
-            <p class="item dog"><span class="dots"><a href = "menu_images/krusty_dog.jpeg" target="_blank" data-lightbox="dog" data-title="Made with the finest leftover ingredients" data-alt="Krusty Dog with mustard in a bun">Krusty Dog</a></span><span> 1.00</span><br>
+            <p class="item dog"><span class="dots"><a href = "menu_images/krusty_dog.jpeg" target="_blank" data-lightbox="dog" data-title="Made with the finest leftover ingredients." data-alt="Krusty Dog with mustard in a bun">Krusty Dog</a></span><span> 1.00</span><br>
                 <span class="extra dots">w/krabby chili</span><span> 1.50</span></p>
             <p class="item pizza no_dots"><span><a href = "menu_images/Pizza_Delivery.jpeg" target="_blank" data-lightbox="pizza" data-title="The Krusty Krab Pizza is the pizza for you and me!" data-alt="Krusty Krab Pizza with pepporoni and mushroom toppings">Krusty Krab Pizza</a></span><br>
                 <span class="extra dots">Small</span><span> 3.50</span><br>
                 <span class="extra dots">Medium</span><span> 4.00</span><br>
                 <span class="extra dots">Large</span><span> 4.50</span><br>
                 <span class="extra dots">Extra topping</span><span> .50</span></p>
-            <p class="item pretty"><span class="dots"><a href = "menu_images/pretty_patty.jpeg" target="_blank" data-lightbox="pretty" data-title="May cause skin or tongue to change color." data-alt="Spongebob holding various pretty paties on a paint palette">Pretty Paties</a></span><span> 1.50</span><br>
+            <p class="item pretty"><span class="dots"><a href = "menu_images/pretty_patty.jpeg" target="_blank" data-lightbox="pretty" data-title="May cause skin or tongue to change color." data-alt="Spongebob holding various pretty paties on a paint palette">Pretty Patties</a></span><span> 1.50</span><br>
                 <span class="extra dots">w/sea cheese</span><span> 1.00</span></p>
             <p class="item single"><span class="dots">Krabby Meal</span><span> 3.50</span></p>
-            <p class="item double"><span class="dots"><a href = "menu_images/meal_deal.webp" target="_blank" data-lightbox="double" data-title="Comes with two Krabby Patties, a large drink, and a side!" data-alt="Spongebob getting ready to serve a Double Krabby Meal">Double Krabby Meal</a></span><span> 3.75</span></p>
+            <p class="item double"><span class="dots"><a href = "menu_images/meal_deal.jpg" target="_blank" data-lightbox="double" data-title="Comes with two Krabby Patties, a large drink, and a side!" data-alt="Spongebob getting ready to serve a Double Krabby Meal">Double Krabby Meal</a></span><span> 3.75</span></p>
             <p class="item triple"><span class="dots">Triple Krabby Meal</span><span> 4.00</span></p>
             <p class="item kid_meal"><span class="dots"><a href = "menu_images/kiddie_meal.jpeg" target="_blank" data-lightbox="kid_meal" data-title="Comes with a free Mermaid Man and Barnacle Boy themed toy!" data-alt="">Kiddie Meal</a></span><span> 3.00</span></p>
             <p class="item rings no_dots"><span>Kelp Rings</span><br>
                 <span class="extra dots">Small</span><span>1.25</span><br>
                 <span class="extra dots">Medium</span><span>1.50</span><br>
                 <span class="extra dots">Large</span><span>1.75</span><br>
-            <p class="item bits no_dots"><span><a href = "menu_images/Coral_Bits.jpeg" target="_blank" data-lightbox="bits" data-title="Spongebob Recommends" data-alt="Close up of coral bits">Coral Bits</a></span><br>
+            <p class="item bits no_dots"><span><a href = "menu_images/Coral_Bits.jpeg" target="_blank" data-lightbox="bits" data-title="Spongebob Recommends!" data-alt="Close up of coral bits">Coral Bits</a></span><br>
                 <span class="extra dots">Small</span><span> 1.00</span><br>
                 <span class="extra dots">Medium</span><span> 1.25</span><br>
                 <span class="extra dots">Large</span><span> 1.50</span><br>
@@ -86,9 +86,27 @@
     <script src="dist/js/lightbox-plus-jquery.js"></script>
     <script src="https://kit.fontawesome.com/797c67656a.js" crossorigin="anonymous"></script>
     <script src="js/java2.js"></script>
+    <script>
+        const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+        lightbox.option({
+            "alwaysShowNavOnTouchDevices": true,
+            'imageFadeDuration': 0,
+            "fadeDuration": 0,
+            "resizeDuration":0,
+        });
+        // console.log(isReduced)
+        if (isReduced === false) {
+            lightbox.option({
+                'imageFadeDuration': 600,
+                "fadeDuration": 600,
+                "resizeDuration":700,
+        });
+        }
+
+    </script>
 
     <footer>
-        <p>All images taken from Spongebob Squarepants&#8482. <br> This website is purely for educational purposes, and I in no way claim rights on these images.</p>
+        <p>All images taken from Spongebob Squarepants&#8482. <br> This website is purely for personal purposes, and I in no way claim rights on these images.</p>
     </footer>
 </body>
 </html>

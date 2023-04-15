@@ -1,19 +1,23 @@
+// creating a list with an index value for each slideshow
 let slideIndex = [1,1,1,1];
 
 
 // showSlides(slideIndex);
 
+// move forward or back one slide based on index, number, current show, and dot
 function plusSlides(i,n,show,dot) {
     console.log('going to next slide')
     showSlides(i,slideIndex[i] += n,show,dot);
 }
 
+// set current slide based on index, number, current show, and dot
 function currentSlide(i,n,show,dot) {
     console.log('setting current slide')
     showSlides(i,slideIndex[i] = n,show,dot);
 }
 
 
+// show current slide based on index, number, current show, and dot
 function showSlides(index,n,show,dot) {
     console.log('showing current slide')
     let i;
@@ -33,11 +37,14 @@ function showSlides(index,n,show,dot) {
   }
 
 
+// checks to show first slide for each show on load
 
 window.addEventListener('load',showSlides(0,slideIndex[0],'show1','dot1'));
 window.addEventListener('load',showSlides(0,slideIndex[0],'show2','dot2'));
 window.addEventListener('load',showSlides(0,slideIndex[0],'show3','dot3'));
 window.addEventListener('load',showSlides(0,slideIndex[0],'show4','dot4'));
+
+// each set of two functions moves the slideshow forward and back depending on show and arrow pressed
 
 document.querySelector("#back1").addEventListener("click",function() { plusSlides(0,-1,'show1','dot1'); } );
 document.querySelector("#next1").addEventListener("click",function() { plusSlides(0,1,'show1','dot1'); } );

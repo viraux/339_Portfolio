@@ -44,9 +44,9 @@ a.skip{
     justify-self: center;
     padding: 6px;
     position: absolute;
-    top: -40px;
+    top: -80px;
     border-radius: 5px;
-    transition: top 1s ease-in-out; 
+    transition: top .8s ease-in-out; 
     z-index: 1;
   }
 
@@ -169,6 +169,7 @@ li {
     position: fixed;
     top: 10%;
     left: 50%;
+    line-height: 1.5;
     margin-left: -37.5%;
     margin-top: 5%;
     padding: 2%;
@@ -197,11 +198,12 @@ li {
 }
 
 
+
 .home {
     background-color: lightcyan;
     background-image: url(../main_images/Atlantis_SquarePantis_Background.webp);
     background-position: center;
-    background-size: cover;
+    background-size: auto 140%;
 
 }
 
@@ -241,11 +243,9 @@ li {
     margin-top: 1%;
 }
 
-/* .logo_text p > span{
-    border: 5px double #BD1520;
-    border-radius: 10%;
-    padding: 1%;
-} */
+.logo_text p{
+    line-height: 1.5;
+}
 
 .main_content > img {
     height: auto;
@@ -317,7 +317,7 @@ li {
     display: block;
     margin: 0 auto;
     width:auto;
-    height: 90%;
+    height: 93%;
 }
 
 
@@ -331,8 +331,8 @@ li {
 }
 
 .item {
-    width: 90%;
-    font-size: 85%;
+    width: 95%;
+    font-size: 70%;
     margin: 1.5% 0;
     color: #6F1F16;
     overflow: hidden;
@@ -409,7 +409,7 @@ li {
     display: grid;
     justify-content: center;
     grid-template-columns: 90%;
-    grid-template-rows: 3fr 1fr 3fr 1fr 3fr 1fr 3fr  1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr;
     gap: 2%;
     justify-items: center;
 }
@@ -439,8 +439,8 @@ li {
 }
 
 #page3 {
-    margin: 2%;
-    font-size: 140%;
+    margin: 5%;
+    font-size: 90%;
 }
 
 #hat{
@@ -568,8 +568,34 @@ li {
     
   }
 
+@media screen and (min-width:480px) {
+    /* home */
+    .home {
+        background-size: auto 130%;
+    }
+
+    /* page 1 */
+    .item {
+        font-size: 115%;
+    }
+
+    /* page 2 */
+
+    .employees {
+        grid-template-rows: 3fr 1fr 3fr 1fr 3fr 1fr 3fr  1fr;
+    }
+
+    #page3 {
+        font-size: 150%;
+    }
+}
+
 
 @media screen and (min-width: 673px) {
+    a.skip{
+        top: -40px;
+        transition: top 1s ease-in-out; 
+      }
     
     .dropdown {
         display: none;
@@ -580,6 +606,11 @@ li {
     }
 
     /* home */
+
+    .home {
+        background-size: auto 120%;
+    
+    }
 
     .greeting {
         padding: 7% 10% 10%;
@@ -645,6 +676,11 @@ li {
 
 
     /* home */
+
+    .home {
+        background-size: cover;
+    
+    }
 
     .greeting {
         padding: 6% 8% 8%;

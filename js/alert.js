@@ -1,6 +1,9 @@
+// set variable name for alert element and also if reduced motion is on
 const alertDiv = document.getElementById("alert");
 const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
+
+// create animations to fade out and in along with duration
 const fadeaway = [
     { transform: "scale(1,1)" },
     { transform: "scale(0,0)" },
@@ -16,11 +19,10 @@ const fadetime = {
     iterations: 1,
 };
   
-  const alert = document.querySelector("#alert");
-
+// fade image in when the button is clicked
   document.querySelector(".showAlert").addEventListener("click", function() {
     if (isReduced === false) {
-        alert.animate(fadein, fadetime);
+        alertDiv.animate(fadein, fadetime);
         alertDiv.style.display = "block";} 
         else {
             alertDiv.style.display = "block";
@@ -29,10 +31,11 @@ const fadetime = {
 })
 
   
+// fade button out when e is pressed
 window.addEventListener("keypress", () => {
     if (event.key === "e") {
     if (isReduced === false) {
-        alert.animate(fadeaway, fadetime);
+        alertDiv.animate(fadeaway, fadetime);
         setTimeout(function(){
             alertDiv.style.display = "none";
         }, 800); } else {
@@ -42,15 +45,15 @@ window.addEventListener("keypress", () => {
   });
 
 
-alert.addEventListener("click", () => {
+//   also fade out when the element is clicked
+alertDiv.addEventListener("click", () => {
     if (isReduced === false) {
-    alert.animate(fadeaway, fadetime);
+    alertDiv.animate(fadeaway, fadetime);
     setTimeout(function(){
         alertDiv.style.display = "none";
     }, 800); } else {
         alertDiv.style.display = "none";
     }
-
 
 });
 
