@@ -1,38 +1,55 @@
-var alertDiv = document.getElementById("alert");
-// let doneBefore = null
-// to show alert box change display
-document.querySelector(".showAlert").addEventListener("click", function() {
-        alertDiv.style.display = "block";
-})
+const alertDiv = document.getElementById("alert");
+const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
-// to hide alert box, make display none using JavaScript
 const fadeaway = [
     { transform: "scale(1,1)" },
     { transform: "scale(0,0)" },
   ];
 
-  
-  const fadetime = {
+const fadein = [
+    { transform: "scale(0,0)" },
+    { transform: "scale(1,1)" },
+];
+
+const fadetime = {
     duration: 900,
     iterations: 1,
-  };
+};
   
   const alert = document.querySelector("#alert");
 
+  document.querySelector(".showAlert").addEventListener("click", function() {
+    if (isReduced === false) {
+        alert.animate(fadein, fadetime);
+        alertDiv.style.display = "block";} 
+        else {
+            alertDiv.style.display = "block";
+        }
+   
+})
+
   
-  window.addEventListener("keypress", () => {
+window.addEventListener("keypress", () => {
+    if (isReduced === false && event.key === "e") {
         alert.animate(fadeaway, fadetime);
         setTimeout(function(){
             alertDiv.style.display = "none";
-        }, 900);
+        }, 800); } else {
+            alertDiv.style.display = "none";
+        }
 
   });
 
-  alert.addEventListener("click", () => {
+
+alert.addEventListener("click", () => {
+    if (isReduced === false) {
     alert.animate(fadeaway, fadetime);
     setTimeout(function(){
         alertDiv.style.display = "none";
-    }, 900);
+    }, 800); } else {
+        alertDiv.style.display = "none";
+    }
+
 
 });
 
