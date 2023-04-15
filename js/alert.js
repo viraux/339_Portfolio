@@ -30,13 +30,14 @@ const fadetime = {
 
   
 window.addEventListener("keypress", () => {
-    if (isReduced === false && event.key === "e") {
+    if (event.key === "e") {
+    if (isReduced === false) {
         alert.animate(fadeaway, fadetime);
         setTimeout(function(){
             alertDiv.style.display = "none";
         }, 800); } else {
             alertDiv.style.display = "none";
-        }
+        }}
 
   });
 
